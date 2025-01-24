@@ -6,11 +6,84 @@ import Section from "./Section.astro";
 import propImg from "../../assets/pics/proposal-pic.png";
 ---
 
-<Section>
+<Section noMax={true}>
   <Card>
+    <canvas class="absolute mx-auto left-0 -top-40 -z-40"></canvas>
+
     <div
-      class="flex bg-[#F3F3F3] rounded-[45px] p-[60px] relative mt-[123px] mb-[163px]"
+      class="flex bg-[#F3F3F3] rounded-[45px] p-[60px] relative mt-[123px] mb-[163px] max-w-[1280px]"
     >
+
+
+    <script>
+      const canvas = document.querySelector('canvas');  
+      const c = canvas!.getContext('2d')
+  
+      class Circle {
+    x:number
+    y:number
+    dx:number
+    dy:number
+    radius:number
+      constructor(x:number,y:number,dx:number,dy:number, radius:number){
+          this.x = x;
+          this.y = y;
+          this.dx = dx;
+          this.dy = dy;
+          this.radius = radius;
+      }
+          
+      
+        draw(c:any) {
+              c.beginPath();
+              c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
+              c.strokeStyle = 'blue';
+              c.stroke();
+              c.fill();
+          }
+          
+        update() {
+              if (this.x + this.radius > innerWidth || this.x - this.radius < 0) {
+                  this.dx = - this.dx;
+              }
+      
+              if (this.y + this.radius > innerHeight || this.y - this.radius < 0) {
+                  this.dy = -this.dy;
+              }
+      
+              this.x += this.dx;
+              this.y += this.dy;
+      
+              this.draw(c);
+          }
+      }
+      
+      let circleArray: Circle[] = [];
+      for (let i = 0; i < 20; i++) {
+          let radius = 30;
+          let x = Math.random() * (innerWidth - radius * 2) + radius;
+          let y = Math.random() * (innerHeight - radius * 2) + radius;
+          let dx = Math.random() - 0.5;
+          let dy = Math.random() - 0.5;
+          circleArray.push(new Circle(x, y, dx, dy, radius));
+      }
+      
+      function animate() {
+
+          canvas!.width = window.innerWidth;
+          canvas!.height = window.innerHeight;
+
+          requestAnimationFrame(animate);
+          c!.clearRect(0, 0, innerWidth, innerHeight);
+      
+          for(let i = 0; i < circleArray.length; i++){
+              circleArray[i].update()
+          }
+      }
+
+      animate()
+    </script>
+
       <div class="w-full md:w-[40%] flex flex-col gap-[26px]">
         <h2>Let's make things happen</h2>
         <p>
@@ -29,5 +102,6 @@ import propImg from "../../assets/pics/proposal-pic.png";
         />
       </picture>
     </div>
+    
   </Card>
 </Section>

@@ -10,9 +10,6 @@ import {
   default as p1,
   default as p2,
   default as p3,
-  default as p4,
-  default as p5,
-  default as p6,
 } from "../../assets/pics/profile-pic.png";
 
 const team = [
@@ -40,30 +37,6 @@ const team = [
       "3+ years of experience in paid search advertising. Skilled in campaign management and performance analysis",
     link: "https://linkedin.com",
   },
-  {
-    pic: p4,
-    name: "Maria Katz",
-    role: "CEO",
-    description:
-      "3+ years of experience in paid search advertising. Skilled in campaign management and performance analysis",
-    link: "https://linkedin.com",
-  },
-  {
-    pic: p5,
-    name: "Maria Katz",
-    role: "CEO",
-    description:
-      "3+ years of experience in paid search advertising. Skilled in campaign management and performance analysis",
-    link: "https://linkedin.com",
-  },
-  {
-    pic: p6,
-    name: "Maria Katz",
-    role: "CEO",
-    description:
-      "3+ years of experience in paid search advertising. Skilled in campaign management and performance analys",
-    link: "https://linkedin.com",
-  },
 ];
 ---
 
@@ -71,7 +44,7 @@ const team = [
   <div class="mt-[140px]">
     <SectionTitle sectionTitle="Team" description={description} />
     <div
-      class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 grid-rows-2 gap-10"
+      class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10"
     >
       {
         team.map((member, index) => (

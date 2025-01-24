@@ -1,9 +1,9 @@
 ---
-const { id } = Astro.props;
+const { id, pt, noMax } = Astro.props;
 ---
 
-<section id={id} class="px-5 flex justify-center overflow-hidden lg:block">
-  <div class="w-full max-w-[1280px] mx-auto">
+<section id={id} class=`px-5 ${pt ? pt : ''} flex justify-center overflow-hidden lg:block`>
+  <div class=`w-full ${noMax ? 'flex justify-center' : 'max-w-[1280px]'} mx-auto relative`>
     <slot />
   </div>
 </section>
