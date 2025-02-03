@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="34.264mm"
+   height="34.264008mm"
+   viewBox="0 0 34.264 34.264008"
+   version="1.1"
+   id="svg5"
+   sodipodi:docname="bola.svg"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="4.3814843"
+     inkscape:cx="353.19081"
+     inkscape:cy="339.49682"
+     inkscape:window-width="1854"
+     inkscape:window-height="1003"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-71.887705,-65.158629)">
+    <circle
+       style="fill:#000000;stroke-width:0.1;stroke-opacity:0.6"
+       id="path240"
+       cx="89.019707"
+       cy="82.290627"
+       r="17.132" />
+    <ellipse
+       style="fill:#ffffff;stroke-width:0.1;stroke-opacity:0.6"
+       id="path296"
+       cx="84.776588"
+       cy="78.057297"
+       rx="2.2761991"
+       ry="7.1381164" />
+    <ellipse
+       style="fill:#ffffff;stroke-width:0.1;stroke-opacity:0.6"
+       id="path296-3"
+       cx="93.262825"
+       cy="78.057297"
+       rx="2.2761991"
+       ry="7.1381164" />
+  </g>
+</svg>

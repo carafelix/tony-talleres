@@ -2,6 +2,7 @@
 import { Image } from "astro:assets";
 import HeroIlust from "../../assets/pics/hero-pic.png";
 import Section from "./Section.astro";
+import fondo from '../../assets/pics/tony/MG_1417.jpg'
 ---
 <div  id="home" class="bg-black">
   <div>
@@ -19,8 +20,8 @@ import Section from "./Section.astro";
         </div>
   </div>
 
-      <div class="binoculares bg-white">
-        <img src="https://picsum.photos/3200/3200" alt="" class="blur-[5px]" >
+      <div class="binoculares bg-white flex justify-center align-middle">
+        <Image src={fondo} alt="" class="blur-[2.5px]" alt="foto inmobiliaria" >
       </div>
   </div>
 

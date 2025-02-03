@@ -1,5 +1,6 @@
 ---
 import { Image } from "astro:assets";
+import brand from '../../assets/svg/gj.svg'
 
 const navLinks = [
   {
@@ -12,7 +13,7 @@ const navLinks = [
   },
 ];
 
-import bars from "../../assets/bars.svg";
+import bars from "../../assets/svg/bars.svg";
 ---
 
 <div
@@ -30,11 +31,10 @@ import bars from "../../assets/bars.svg";
     >
     
       <!-- Nav Links -->
-      <ul class="lg:flex lg:gap-10 lg:rounded-full">
+      <ul class="lg:flex lg:gap-5 lg:rounded-full">
         <li class="mx-4 p-4 lg:mx-0 px-0 flex justify-end">
-          <a href="#home">
-            LOGO
-            <!-- <Image src={brand} alt="Brand Logo" class="w-[219px]" loading="eager" /> -->
+          <a href="#home" class="mx-2 lg:mx-0 px-0 flex justify-end max-h-8 max-w-8">
+            <Image src={brand} alt="Brand Logo" loading="eager" class="fill-black" />
           </a>
         </li>
         {
