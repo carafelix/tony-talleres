@@ -2,73 +2,54 @@
 import SectionTitle from "../ui/SectionTitle.astro";
 import ServiceCard from "../ui/ServiceCard.astro";
 import Section from "./Section.astro";
-
-import c1 from "../../assets/pics/card-pic1.png";
-import c2 from "../../assets/pics/card-pic2.png";
-import c3 from "../../assets/pics/card-pic3.png";
-import c4 from "../../assets/pics/card-pic4.png";
-import c5 from "../../assets/pics/card-pic5.png";
-import c6 from "../../assets/pics/card-pic6.png";
+import phoneCam from '../../assets/svg/adhoc/camphone.svg'
+import phoneVideo from '../../assets/svg/adhoc/videophone.svg'
+import drone from '../../assets/svg/adhoc/drone.svg'
+import proCam from '../../assets/svg/adhoc/procam.svg'
 
 const cards = [
   {
     index: 1,
-    titleTop: "Search Engine",
-    titleBottom: "Optimization",
-    img: c1,
-    alt: "SEO",
-    link: "https://google.com",
+    titleTop: "Fotografía y Edición",
+    titleBottom: "Móvil 🤳",
+    img: phoneCam,
+    alt: "Taller foto móvil",
+    link: "#accordion__item1"
   },
   {
     index: 2,
-    titleTop: "Pay-per-click",
-    titleBottom: "advertising",
-    img: c2,
-    alt: "SEO",
-    link: "https://google.com",
+    titleTop: "Video y Edición",
+    titleBottom: "Móvil 🤳",
+    img: phoneVideo,
+    alt: "Taller video móvil",
+    link: "#accordion__item2"
   },
   {
     index: 3,
-    titleTop: "Social Media",
-    titleBottom: "Marketing",
-    img: c3,
-    alt: "SEO",
-    link: "https://google.com",
+    titleTop: "Fotografía y Edición",
+    titleBottom: "Equipo Profesional 📷",
+    img: proCam,
+    alt: "Taller foto pro",
+    link: "#accordion__item3"
   },
   {
     index: 1,
-    titleTop: "Email",
-    titleBottom: "Marketing",
-    img: c4,
-    alt: "SEO",
-    link: "https://google.com",
-  },
-  {
-    index: 2,
-    titleTop: "Content",
-    titleBottom: "Creation",
-    img: c5,
-    alt: "SEO",
-    link: "https://google.com",
-  },
-  {
-    index: 3,
-    titleTop: "Analytics and",
-    titleBottom: "Tracking",
-    img: c6,
-    alt: "SEO",
-    link: "https://google.com",
-  },
+    titleTop: "Fotografía y Video",
+    titleBottom: "Drones 🛸",
+    img: drone,
+    alt: "Taller Drones",
+    link: "#accordion__item4"
+  }
 ];
 
 const description =
-  "At our digital marketing agency, we offer a range of services to help businesses grow and succeed online. These services include";
+  "Ofrecemos una variedad de talleres enfocados al aprendizaje de la técnica y conceptualization de la fotografía inmobiliaria";
 ---
 
-<Section>
-  <div class="mt-[140px] mb-5">
-    <SectionTitle sectionTitle="Services" description={description} />
-    <div class="grid lg:grid-cols-2 lg:grid-rows-3 gap-10">
+<Section id="talleres">
+  <div class="mt-20 mb-5">
+    <SectionTitle sectionTitle="Talleres" description={description} />
+    <div class="grid lg:grid-cols-2 gap-10">
       {
         cards.map((card) => (
           <ServiceCard

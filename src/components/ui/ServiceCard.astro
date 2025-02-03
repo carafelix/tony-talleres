@@ -19,10 +19,10 @@ const { index, titleTop, titleBottom, img, alt, link } = Astro.props;
     class=`h-[300px] w-full sm:h-full lg:gap-[60px] grid custom-grid lg:grid-cols-2 lg:grid-rows-1 p-8 sm:p-[50px] rounded-[45px] ${index === 1 ? 'bg-white' : index === 2 ? 'bg-green' : 'bg-dark text-white'}`
   >
     <h3 class=`flex flex-col col-span-2 lg:col-span-1`>
-      <span class=`w-[fit-content] ${index === 1 ? 'greenhead' : 'whitehead'}`
+      <span class='w-[fit-content] whitehead text-nowrap'
         >{titleTop}</span
       >
-      <span class=`w-[fit-content] ${index === 1 ? 'greenhead' : 'whitehead'}`
+      <span class=`w-[fit-content] whitehead text-nowrap`
         >{titleBottom}</span
       >
     </h3>
@@ -37,8 +37,8 @@ const { index, titleTop, titleBottom, img, alt, link } = Astro.props;
     </picture>
     <div class="flex items-end">
       <a href={link} class="flex items-center gap-3.5"
-        ><Image src={index === 1 || index === 2 ? gob : wob} alt={alt} />
-        <span class="hidden sm:block">Service Info</span></a
+        ><Image src={index === 1 || index === 2 ? gob : wob } alt={alt} />
+        <span class="hidden sm:block">Info Taller</span></a
       >
     </div>
   </div>

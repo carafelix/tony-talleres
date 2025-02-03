@@ -4,7 +4,7 @@ import TeamCard from "../ui/TeamCard.astro";
 import Section from "./Section.astro";
 
 const description =
-  "Meet the skilled and experienced team behind our successful digital marketing strategies";
+  "Detrás de cada proyecto hay un equipo lleno de ambiciones. Conoce al nuestro!";
 
 import tony from "../../assets/pics/team/tony.png";
 
@@ -19,9 +19,9 @@ const team = [
 ];
 ---
 
-<Section id="about">
-  <div class="mt-[140px]">
-    <SectionTitle sectionTitle="Team" description={description} />
+<Section id="equipo">
+  <div class="mt-[100px]">
+    <SectionTitle sectionTitle="Equipo" description={description} />
     <div
       class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10"
     >
@@ -36,9 +36,6 @@ const team = [
           />
         ))
       }
-    </div>
-    <div class="flex justify-end mt-10">
-      <button class="btn-primary">See all team</button>
     </div>
   </div>
 </Section>

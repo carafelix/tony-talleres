@@ -22,7 +22,7 @@
     }
 
     :root {
-        --green: #b9ff66;
+        --green: #93c5fd;
         --black: rgb(0, 0, 0);
         --dark: #191a23;
         --white: #f3f3f3;
@@ -97,7 +97,7 @@
         duration-200;
         }
         .btn-primary:hover {
-            @apply bg-green text-black transform scale-105;
+            @apply bg-blue-400 transform scale-105;
         }
 
         .btn-secondary {
@@ -109,7 +109,7 @@
         }
 
         .btn-tertiary {
-            @apply bg-green text-black rounded-lg px-[35px] py-5 transition-all
+            @apply bg-blue-400 rounded-lg px-[35px] py-5 transition-all
         duration-200;
         }
         .btn-tertiary:hover {
@@ -117,7 +117,7 @@
         }
 
         .greenhead {
-            @apply bg-green text-black rounded-[7px] px-[7px];
+            @apply bg-blue-300 text-black rounded-[7px] px-[7px];
         }
 
         .whitehead {

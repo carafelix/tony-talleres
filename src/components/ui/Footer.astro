@@ -1,23 +1,20 @@
 ---
-import { Image } from "astro:assets";
-import Facebook from "../../assets/svg/facebook.svg";
-import Linkedin from "../../assets/svg/linkedin.svg";
-import Logo from "../../assets/svg/logo-alt.svg";
-import Twitter from "../../assets/svg/twitter.svg";
+import { Image , Picture } from "astro:assets";
+import Brand from "../../assets/svg/gj.svg";
+import instagram from '../../assets/svg/instagram.svg'
+import wsp from '../../assets/svg/wsp.svg'
 import ShortForm from "../ui/ShortForm.astro";
 
 const logos = [
-  { name: "Facebook", src: Facebook, link: "https://facebook.com" },
-  { name: "Linkedin", src: Linkedin, link: "https://linkedin.com" },
-  { name: "Twitter", src: Twitter, link: "https://twitter.com" },
+  { name: "WhatsApp", src: wsp, link: "https://api.whatsapp.com/send?phone=569566767278&text=Hola,%20necesito%20más%20información%20sobre%20los%20talleres%20de%20fotografía%20inmobiliaria" },
+  { name: "Instagram", src: instagram, link: "https://www.instagram.com/gj.fotografiainmobiliaria/" },
 ];
 
 const links = [
-  { name: "About us", href: "#about" },
-  { name: "Services", href: "#services" },
-  { name: "Use Cases", href: "#cases" },
-  { name: "Pricing", href: "#Testimonials" },
-  { name: "Blog", href: "#Home" },
+  { name: "Home", href: "#home" },
+  { name: "Talleres", href: "#talleres" },
+  { name: "Equipo", href: "#equipo" },
+  { name: "Testimonios", href: "#testimonials" },
 ];
 ---
 
@@ -32,7 +29,9 @@ const links = [
         >
           <picture>
             <a href="#home">
-              <Image src={Logo} alt="Logo for Kreatif Brand" />
+              <Picture src={Brand} alt={'GJ logo'} class:list={['invert','max-w-14','inline-block', 'align-baseline']}/> Workshop
+              <hr>
+              Fotografía Inmobiliaria
             </a>
           </picture>
           <ul class="flex flex-col sm:flex-row gap-5">
@@ -48,7 +47,7 @@ const links = [
               })
             }
           </ul>
-          <ul class="flex gap-5">
+          <ul class="flex gap-5 *:max-w-10 invert">
             {
               logos.map((logo) => {
                 return (
@@ -69,13 +68,10 @@ const links = [
           <div
             class="flex text-center lg:text-start flex-col w-full lg:w-[30%]"
           >
-            <h3 class="mb-5">Contact us:</h3>
+            <h3 class="mb-5">Contáctanos:</h3>
             <div class="flex flex-col justify-between gap-4">
-              <span> Email: examplemail.com </span>
-              <span> Phone: +123 456 789 </span>
-              <span class="lg:w-3/4">
-                Address: 1234 Street Name, City Name, Country Name
-              </span>
+              <span> Email: <a href="mailto:gjfotografia7@gmail.com">gjfotografia7@gmail.com</a></span>
+              <span> Teléfono: <a href="tel:+56956676727"> +56 9 5667 6727</a></span>
             </div>
           </div>
           <div class="flex-grow my-10 lg:my-0 lg:ml-12">
@@ -89,24 +85,20 @@ const links = [
         class="flex flex-col lg:flex-row h-20 justify-center mt-4 text-center md:justify-between md:mt-0"
       >
         <span
-          >2024 Positivus - Made With <a
+          >2024 GJ Workshop - Hecho con <a
             class="underline"
             target="_blank"
             href="https://astro.build/">Astro</a
           ></span
         >&nbsp
-        <span>
-          <a
-            href="https://www.olgaskuja.design/"
+          <span>
+            Desarrollado por:
+            <a
+            href="https://heroprotagonist.is-a.dev/"
             target="_blank"
-            class="underline">Credit (Olga Skuja)</a
-          ><span> &</span>
-          <a
-            class="underline"
-            href="https://creativecommons.org/licenses/by/4.0/"
-            target="_blank">Licence</a
+            class="underline">Hero Protagonist</a
           >
-        </span>
+          </span>
       </div>
     </div>
   </div>

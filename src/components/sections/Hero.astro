@@ -1,43 +1,44 @@
 ---
 import { Image } from "astro:assets";
+import gj from '../../assets/svg/gj.svg'
 import fondo from '../../assets/pics/tony/MG_1417.jpg'
 ---
 <div  id="home" class="bg-black">
     <div>
-        <div class="absolute  lg:bottom-20 m-5 p-4 rounded-md bg-slate-800/40 text-white z-20">
-              <h1>Tony talleres</h1>
-              <p>blablabla</p>
-              <div class="flex gap-2">
+        <div class="absolute  lg:bottom-20 m-5 p-4 rounded-md bg-slate-800/60 text-white z-20">
+              <h1 class="flex items-baseline gap-4"><Image src={gj} alt="GJ" class="inline w-20 p-0 m-0 invert"/>Workshop</h1>
+              <h3 class="text-xl lg:text-2xl">Fotografía Inmobiliaria</h3>
+              <div class="flex gap-2 mt-2">
                 <button class="btn-secondary invert white py-2.5">+ info</button>
-                <button class="btn-primary hover:invert greenhead p-2.5">Participa!</button>
+                <button class="btn-tertiary p-2.5">Participa!</button>
               </div>
         </div>
 
-        <div class="absolute right-0 bottom-20 m-5 p-4 rounded-md bg-slate-800/40 text-white z-20">
-          <h2>superblabla</h2>
+        <div class="absolute right-0 bottom-5 lg:bottom-20 m-5 p-4 rounded-md bg-slate-800/60 text-white z-20 text-end">
+          <h2>Aprende a mostrar <br> estilos de vida</h2>
         </div>
     </div>
 
-      <div class="mx-2 lg:mx-0 absolute flex flex-col w-full h-full justify-between lg:items-center *:my-2">
-        <div class="h-2 w-20 bg-slate-600 z-10"></div>
-        <div class="h-2 w-20 bg-slate-500 z-10"></div>
-        <div class="h-2 w-20 bg-slate-300 z-10"></div>
-        <div class="h-2 w-20 bg-slate-50 z-10"></div>
-        <div class="h-2 w-20 bg-slate-50 z-10"></div>
-        <div class="h-2 w-20 bg-slate-300 z-10"></div>
-        <div class="h-2 w-20 bg-slate-500 z-10"></div>
-        <div class="h-2 w-20 bg-slate-600 z-10"></div>
+      <div class="mx-1 lg:mx-0 absolute flex flex-col w-full h-full justify-between lg:items-center *:my-2">
+        <div class="h-2 w-10 lg:w-20 bg-slate-600 z-10"></div>
+        <div class="h-2 w-10 lg:w-20 bg-slate-500 z-10"></div>
+        <div class="h-2 w-10 lg:w-20 bg-slate-300 z-10"></div>
+        <div class="h-2 w-10 lg:w-20 bg-slate-50 z-10"></div>
+        <div class="h-2 w-10 lg:w-20 bg-slate-50 z-10"></div>
+        <div class="h-2 w-10 lg:w-20 bg-slate-300 z-10"></div>
+        <div class="h-2 w-10 lg:w-20 bg-slate-500 z-10"></div>
+        <div class="h-2 w-10 lg:w-20 bg-slate-600 z-10"></div>
       </div>
 
       <div class="mx-2 lg:mx-0 absolute flex flex-col w-full h-full justify-between items-end lg:hidden lg:items-center *:my-2">
-        <div class="h-2 w-20 bg-slate-600 z-10"></div>
-        <div class="h-2 w-20 bg-slate-500 z-10"></div>
-        <div class="h-2 w-20 bg-slate-300 z-10"></div>
-        <div class="h-2 w-20 bg-slate-50 z-10"></div>
-        <div class="h-2 w-20 bg-slate-50 z-10"></div>
-        <div class="h-2 w-20 bg-slate-300 z-10"></div>
-        <div class="h-2 w-20 bg-slate-500 z-10"></div>
-        <div class="h-2 w-20 bg-slate-600 z-10"></div>
+        <div class="h-2 w-10 lg:w-20 bg-slate-600 z-10"></div>
+        <div class="h-2 w-10 lg:w-20 bg-slate-500 z-10"></div>
+        <div class="h-2 w-10 lg:w-20 bg-slate-300 z-10"></div>
+        <div class="h-2 w-10 lg:w-20 bg-slate-50 z-10"></div>
+        <div class="h-2 w-10 lg:w-20 bg-slate-50 z-10"></div>
+        <div class="h-2 w-10 lg:w-20 bg-slate-300 z-10"></div>
+        <div class="h-2 w-10 lg:w-20 bg-slate-500 z-10"></div>
+        <div class="h-2 w-10 lg:w-20 bg-slate-600 z-10"></div>
       </div>
   
 
