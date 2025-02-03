@@ -1,5 +1,5 @@
 ---
-import { Image } from "astro:assets";
+import { Picture } from "astro:assets";
 import linkd from "../../assets/pics/profile-in.svg";
 import Card from "./Card.astro";
 
@@ -7,18 +7,48 @@ const { pic, name, role, description, link } = Astro.props;
 ---
 
 <Card isUnderline={true}>
-  <div class="p-[60px]">
-    <div class="flex flex-col sm:flex-row relative">
-      <picture><Image src={pic} alt={name} /></picture>
-      <div class="flex flex-col justify-end sm:ml-5">
+  <div class="p-[60px] l">
+    <div class="flex flex-col sm:flex-row relative gap-2">
+      <Picture src={pic} alt={name} class:list={['member']} />
+      <div class="flex flex-col gap-2 justify-center sm:ml-5">
         <h3>{name}</h3>
         <p>{role}</p>
       </div>
-      <a href={link} class="absolute right-0 top-0"
+      <!-- <a href={link} class="absolute right-0 top-0"
         ><Image src={linkd} alt="Linkedin Logo" /></a
-      >
+      > -->
     </div>
     <div class="w-full h-[1px] bg-black my-7"></div>
     <div>{description}</div>
   </div>
 </Card>
+
+<style>
+
+.member {
+	place-self: center;
+	border: solid 0.75em transparent;
+	padding: 0.5em;
+	border-radius: 50%;
+	background: 
+		radial-gradient(circle at calc(50% + (50% - 0.375em)*1) calc(50% + (50% - 0.375em)*0), 
+			#f03355 calc(0.375em - 1px), transparent 0.375em), /* Red at 0deg (12 o'clock) */
+		radial-gradient(circle at calc(50% + (50% - 0.375em)*0) calc(50% + (50% - 0.375em)*1), 
+			#514b82 calc(0.375em - 1px), transparent 0.375em), /* Purple at 90deg (3 o'clock) */
+		radial-gradient(circle at calc(50% + (50% - 0.375em)*-1) calc(50% + (50% - 0.375em)*0), 
+			#ffa516 calc(0.375em - 1px), transparent 0.375em), /* Orange at 180deg (6 o'clock) */
+		radial-gradient(circle at calc(50% + (50% - 0.375em)*0) calc(50% + (50% - 0.375em)*-1), 
+			#25b09b calc(0.375em - 1px), transparent 0.375em), /* Green at 270deg (9 o'clock) */
+		conic-gradient(#f03355 0% 90deg, #514b82 0% 180deg, #ffa516 0% 270deg, #25b09b 0% 360deg);
+	background-origin: border-box;
+	--mask: 
+		radial-gradient(closest-side, 
+			red calc(100% - 0.75em - 0.5em - 1px), 
+			transparent calc(100% - 0.75em - 0.5em) calc(100% - 0.75em), 
+			red  calc(100% - 0.75em + 1px) calc(100% - 1px), 
+			transparent);
+	-webkit-mask: var(--mask);
+	mask: var(--mask);
+}
+
+</style>

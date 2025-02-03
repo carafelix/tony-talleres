@@ -6,36 +6,15 @@ import Section from "./Section.astro";
 const description =
   "Meet the skilled and experienced team behind our successful digital marketing strategies";
 
-import {
-  default as p1,
-  default as p2,
-  default as p3,
-} from "../../assets/pics/profile-pic.png";
+import tony from "../../assets/pics/team/tony.png";
 
 const team = [
   {
-    pic: p1,
-    name: "Maria Katz",
+    pic: tony,
+    name: "Gabriel Jorquera",
     role: "CEO",
     description:
-      "3+ years of experience in paid search advertising. Skilled in campaign management and performance analysis",
-    link: "https://linkedin.com",
-  },
-  {
-    pic: p2,
-    name: "Maria Katz",
-    role: "CEO",
-    description:
-      "3+ years of experience in paid search advertising. Skilled in campaign management and performance analysis",
-    link: "https://linkedin.com",
-  },
-  {
-    pic: p3,
-    name: "Maria Katz",
-    role: "CEO",
-    description:
-      "3+ years of experience in paid search advertising. Skilled in campaign management and performance analysis",
-    link: "https://linkedin.com",
+      "LLENAME ESTO",
   },
 ];
 ---
@@ -54,7 +33,6 @@ const team = [
             name={member.name}
             role={member.role}
             description={member.description}
-            link={member.link}
           />
         ))
       }

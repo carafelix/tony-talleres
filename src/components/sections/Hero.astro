@@ -1,27 +1,48 @@
 ---
 import { Image } from "astro:assets";
-import HeroIlust from "../../assets/pics/hero-pic.png";
-import Section from "./Section.astro";
 import fondo from '../../assets/pics/tony/MG_1417.jpg'
 ---
 <div  id="home" class="bg-black">
-  <div>
-      <div class="absolute  lg:bottom-20 m-5 p-4 rounded-md bg-slate-800/20 text-white z-20">
-            <h1>Tony talleres</h1>
-            <p>blablabla</p>
-            <div class="flex gap-2">
-              <button class="btn-secondary invert white py-2.5">+ info</button>
-              <button class="btn-primary hover:invert greenhead p-2.5">Participa!</button>
-            </div>
+    <div>
+        <div class="absolute  lg:bottom-20 m-5 p-4 rounded-md bg-slate-800/40 text-white z-20">
+              <h1>Tony talleres</h1>
+              <p>blablabla</p>
+              <div class="flex gap-2">
+                <button class="btn-secondary invert white py-2.5">+ info</button>
+                <button class="btn-primary hover:invert greenhead p-2.5">Participa!</button>
+              </div>
+        </div>
+
+        <div class="absolute right-0 bottom-20 m-5 p-4 rounded-md bg-slate-800/40 text-white z-20">
+          <h2>superblabla</h2>
+        </div>
+    </div>
+
+      <div class="mx-2 lg:mx-0 absolute flex flex-col w-full h-full justify-between lg:items-center *:my-2">
+        <div class="h-2 w-20 bg-slate-600 z-10"></div>
+        <div class="h-2 w-20 bg-slate-500 z-10"></div>
+        <div class="h-2 w-20 bg-slate-300 z-10"></div>
+        <div class="h-2 w-20 bg-slate-50 z-10"></div>
+        <div class="h-2 w-20 bg-slate-50 z-10"></div>
+        <div class="h-2 w-20 bg-slate-300 z-10"></div>
+        <div class="h-2 w-20 bg-slate-500 z-10"></div>
+        <div class="h-2 w-20 bg-slate-600 z-10"></div>
       </div>
 
-      <div class="absolute right-0 bottom-20 m-5 p-4 rounded-md bg-slate-800/20 text-white z-20">
-        <h2>superblabla</h2>
-        </div>
-  </div>
+      <div class="mx-2 lg:mx-0 absolute flex flex-col w-full h-full justify-between items-end lg:hidden lg:items-center *:my-2">
+        <div class="h-2 w-20 bg-slate-600 z-10"></div>
+        <div class="h-2 w-20 bg-slate-500 z-10"></div>
+        <div class="h-2 w-20 bg-slate-300 z-10"></div>
+        <div class="h-2 w-20 bg-slate-50 z-10"></div>
+        <div class="h-2 w-20 bg-slate-50 z-10"></div>
+        <div class="h-2 w-20 bg-slate-300 z-10"></div>
+        <div class="h-2 w-20 bg-slate-500 z-10"></div>
+        <div class="h-2 w-20 bg-slate-600 z-10"></div>
+      </div>
+  
 
       <div class="binoculares bg-white flex justify-center align-middle">
-        <Image src={fondo} alt="" class="blur-[2.5px]" alt="foto inmobiliaria" >
+        <Image src={fondo} alt="" class="blur-[2px]" alt="foto inmobiliaria" >
       </div>
   </div>
 

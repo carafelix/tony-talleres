@@ -1,23 +1,28 @@
 ---
 import { Image } from "astro:assets";
 import s1 from "../../assets/pics/portalinmobiliario.png";
+import s2 from "../../assets/pics/portalinmobiliario.png";
+import s3 from "../../assets/pics/portalinmobiliario.png";
 import Section from "./Section.astro";
 
 const sponsors = [
   { logo: s1, alt: "Logo Portal Inmobiliario" },
+  { logo: s2, alt: "Logo Portal Inmobiliario" },
+  { logo: s3, alt: "Logo Portal Inmobiliario" },
 ];
 ---
 
 <Section id="sponsors">
-  <div class="flex flex-wrap justify-between gap-7 mt-[60px] *:*:max-w-120px">
-    {
-      sponsors.map((sponsor) => {
-        return (
-          <div>
-            <Image src={sponsor.logo} alt={sponsor.alt} loading="eager" />
-          </div>
-        );
-      })
-    }
+    <h2 class="opacity-60 text-center mt-[30px]">Capacitados con nosotros</h2>
+    <div class="flex flex-wrap justify-center gap-7 mt-[40px]">
+      {
+        sponsors.map((sponsor) => {
+          return (
+            <div>
+              <Image src={sponsor.logo} alt={sponsor.alt} loading="eager" class={'max-w-[200px]'} />
+            </div>
+          );
+        })
+      }
   </div>
 </Section>
