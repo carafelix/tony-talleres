@@ -4,6 +4,7 @@ import Card from "../ui/Card.astro";
 import Section from "./Section.astro";
 
 import escena from "../../assets/svg/adhoc/escena.svg";
+import ojos from '../../assets/svg/adhoc/ojos.svg'
 ---
 
 <Section noMax={true}>
@@ -11,7 +12,7 @@ import escena from "../../assets/svg/adhoc/escena.svg";
     <canvas class="absolute mx-auto left-0 -top-40 -z-40"></canvas>
 
     <div
-      class="flex bg-[#F3F3F3] rounded-[45px] p-[60px] relative mt-[123px] mb-[163px] max-w-[1280px]"
+      class="flex bg-[#F3F3F3] rounded-[45px] p-[60px] relative mt-[123px] mb-[163px] max-w-[1280px] justify-between"
     >
 
 
@@ -92,16 +93,33 @@ import escena from "../../assets/svg/adhoc/escena.svg";
         </p>
         <button class="btn-primary">Regístrate!</button>
       </div>
+
       <picture
-        class="hidden md:flex absolute right-[-10%] lg:right-20 top-[-15%] h-[450px] items-center justify-center"
+        class="hidden md:flex relative"
       >
         <Image
           src={escena}
           alt="This is an illustration"
           class="hidden md:flex lg:w-auto"
         />
+        <Image
+          id={'ojitos'}
+          src={ojos}
+          alt="This is an illustration"
+          class="absolute top-[51%] left-[47.5%] hidden md:flex lg:w-auto"
+        />
       </picture>
+
     </div>
     
   </Card>
 </Section>
+
+<script>
+  const ojitos = document.querySelector('#ojitos') as HTMLElement
+  document.addEventListener('mousemove', (ev) => {
+    ojitos.style.top = `calc(51% + ${Math.floor(ev.clientY / 70)}px)`
+    ojitos.style.left = `calc(47.5% + ${Math.floor(ev.clientX / 200)}px)`
+    console.log(ev.clientX)
+  })
+</script>
