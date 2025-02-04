@@ -36,10 +36,10 @@ const { index, titleTop, titleBottom, img, alt, link } = Astro.props;
       />
     </picture>
     <div class="flex items-end">
-      <a href={link} class="flex items-center gap-3.5"
+      <a href={link} class:list={["flex items-center gap-3.5",'to_accordion']}
         ><Image src={index === 1 || index === 2 ? gob : wob } alt={alt} />
-        <span class="hidden sm:block">Info Taller</span></a
-      >
+        <span class="hidden sm:block">Info Taller</span>
+      </a>
     </div>
   </div>
 </Card>
@@ -49,3 +49,55 @@ const { index, titleTop, titleBottom, img, alt, link } = Astro.props;
     grid-template: auto auto;
   }
 </style>
+
+<script>
+
+const links = document.querySelectorAll('.to_accordion');
+
+links.forEach(el => el.addEventListener('click', () => {
+  const href = el.getAttribute('href')
+
+  const accordionItems = document.querySelectorAll(
+      ".accordion__item"
+    ) as NodeListOf<HTMLElement>;
+
+  const accordionTarget = document.querySelector(href!) as HTMLElement
+  const accordionToggle = accordionTarget.querySelector(".accordion__toggle");
+  const accordionIcon = accordionTarget.querySelector(".accordion__icon");
+  
+      if (accordionToggle && accordionIcon) {
+          // Close other accordion items
+          accordionItems.forEach((otherAccordionItem) => {
+            if (
+              otherAccordionItem !== accordionTarget &&
+              otherAccordionItem.classList.contains("active")
+            ) {
+              const otherAccordionToggle =
+                otherAccordionItem.querySelector(".accordion__toggle");
+              const otherAccordionIcon =
+                otherAccordionItem.querySelector(".accordion__icon");
+
+              if (otherAccordionToggle && otherAccordionIcon) {
+                otherAccordionItem.classList.remove("active");
+                otherAccordionItem.classList.remove("bg-green");
+                otherAccordionToggle.setAttribute("aria-expanded", "false");
+                otherAccordionItem.style.height = "160px";
+                otherAccordionIcon.classList.remove("rotate-180");
+                otherAccordionIcon.classList.remove("collapsed");
+              }
+            }
+          });
+          
+           setTimeout(()=>{
+            accordionTarget.classList.add("active");
+            accordionToggle.setAttribute("aria-expanded", "true");
+            // Set height according to content
+            accordionTarget.style.height = accordionTarget.scrollHeight + "px";
+            accordionTarget.classList.add("bg-green");
+            accordionIcon.classList.add("rotate-180");
+            accordionIcon.classList.add("collapsed");
+           },700)
+      }
+}))
+
+</script>
