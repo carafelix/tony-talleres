@@ -37,8 +37,9 @@ const { index, titleTop, titleBottom, img, alt, link } = Astro.props;
     </picture>
     <div class="flex items-end">
       <a href={link} class:list={["flex items-center gap-3.5",'to_accordion']}
-        ><Image src={index === 1 || index === 2 ? gob : wob } alt={alt} />
-        <span class="hidden sm:block">Info Taller</span>
+        >
+        <span>Info Taller</span>
+        <Image src={index === 1 || index === 2 ? gob : wob } alt={alt} />
       </a>
     </div>
   </div>
